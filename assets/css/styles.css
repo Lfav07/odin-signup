@@ -1,0 +1,210 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+/* Custom Font */
+@font-face {
+    font-family: 'norse';
+    src: url("../fonts/norse-bold-webfont.woff2") format('woff2'),
+         url("../fonts/norse-bold-webfont.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Variables for common values */
+:root {
+    --primary-color: rgb(39, 155, 200);
+    --primary-color-hover: rgb(59, 175, 220);
+    --background-color: whitesmoke;
+    --error-color: #b92326;
+    --font-size-small: 0.8rem;
+    --font-size-large: 1.2rem;
+    --font-weight-bold: 600;
+    --border-radius: 5px;
+}
+
+/* Container */
+.container {
+    display: flex;
+    min-height: 100svh;
+}
+
+/* Sidebar */
+.image-sidebar {
+    width: 35svw;
+    height: 100svh;
+    position: relative;
+    background: url("https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.logo-container {
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(30, 30, 30, 0.466);
+    font-family: norse;
+    font-size: 6rem;
+    color: white;
+}
+
+.logo-container::before {
+    content: "";
+    background: url("https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png") no-repeat center center;
+    background-size: contain;
+    display: inline-block;
+    height: 127px;
+    width: 95px;
+}
+
+.credits {
+    color: white;
+    font-size: var(--font-size-small);
+    margin-bottom: 5px;
+}
+
+.credits a:visited {
+    color: white;
+}
+
+/* Main Content */
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    flex-basis: 0;
+    background: var(--background-color);
+}
+
+.main-header {
+    display: flex;
+    justify-content: flex-start;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-large);
+    max-width: 60ch;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+
+/* Sign-up Section */
+.signup-section {
+    background: white;
+    box-shadow: 5px 2px 5px 5px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.signup-title {
+    padding-bottom: 15px;
+}
+
+.signup-form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.signup-form > [class^="signup-form"] {
+    width: 50%;
+    padding: 15px 0;
+}
+
+.signup-form label {
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.8px;
+    display: block;
+}
+
+/* Input Styles */
+.signup-form input {
+    border-radius: var(--border-radius);
+    border: 1px solid #E5E7EB;
+    background-color: transparent;
+    padding: 8px;
+}
+
+.signup-form input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.signup-form input + span {
+    position: relative;
+    display: block;
+}
+
+.signup-form input + span::before {
+    position: absolute;
+    bottom: -22px;
+    left: 0;
+}
+
+.signup-form input:invalid + span::before {
+    display: none;
+}
+
+
+
+/* Submit Button */
+.signup-form-submit button {
+    padding: 8px 42px;
+    cursor: pointer;
+    color: white;
+    background: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: var(--font-weight-bold);
+    box-shadow: 2px 2px 4px rgba(29, 125, 170, 0.5);
+}
+
+.signup-form-submit button:hover {
+    background: var(--primary-color-hover);
+}
+
+/* Account Active */
+.account-active {
+    font-weight: 500;
+    padding-top: 30px;
+}
+
+.account-active a {
+    color: var(--primary-color);
+    font-weight: var(--font-weight-bold);
+}
+
+/* Footer Section */
+.footer-section {
+    padding: 30px 0 30px 30px;
+}

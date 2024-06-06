@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>Sign-up Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="image-sidebar">
+            <div class="logo-container">ODIN</div>
+            <div class="credits">
+                Photo by <a href="./images/odin-lined.png">Unsplash</a>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main-header">
+                Odin sign up page!
+            </div>
+            <div class="signup-section">
+                <h2 class="signup-title">Let's do this!</h2>
+                <form action="#" method="post" class="signup-form" id="signup-form">
+                    <div class="signup-form-name">
+                        <label for="name">FIRST NAME *</label>
+                        <input type="text" name="name" id="name" size="30" maxlength="245" aria-required="true" pattern="[a-zA-Z]+" required>
+                        <span></span>
+                    </div>
+                    <div class="signup-form-surname">
+                        <label for="surname">LAST NAME *</label>
+                        <input type="text" name="surname" id="surname" size="30" maxlength="245" aria-required="true" pattern="[a-zA-Z]+" required>
+                        <span></span>
+                    </div>
+                    <div class="signup-form-email">
+                        <label for="email">EMAIL *</label>
+                        <input type="email" name="email" id="email" size="30" aria-required="true" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
+                        <span></span>
+                    </div>
+                    <div class="signup-form-tel">
+                        <label for="tel">PHONE NUMBER (11 digits)</label>
+                        <input type="tel" name="tel" id="tel" size="30" aria-required="false" pattern="\d{11}">
+                        <span></span>
+                    </div>
+                    <div class="signup-form-pwd">
+                        <label for="pwd">PASSWORD * (8 Characters minimum)</label>
+                        <input type="password" name="pwd" id="pwd" size="30" maxlength="245" aria-required="true" pattern="^.{8,}$" required>
+                        <span></span>
+                    </div>
+                    <div class="signup-form-confirm-pwd">
+                        <label for="pwd2">CONFIRM PASSWORD *</label>
+                        <input type="password" name="pwd2" id="pwd2" size="30" maxlength="245" aria-required="true" pattern="^.{8,}$" required>
+                        <span></span>
+                    </div>
+                </form>
+            </div>
+            <div class="footer-section">
+                <div class="signup-form-submit">
+                    <button type="submit" form="signup-form">Create Account</button>
+                </div>
+                <div class="account-active">
+                    Already have an account? <a href="#">Log In</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
