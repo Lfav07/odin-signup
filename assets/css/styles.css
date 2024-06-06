@@ -1,4 +1,4 @@
-/* General Styles */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -27,7 +27,7 @@ p, h1, h2, h3, h4, h5, h6 {
     isolation: isolate;
 }
 
-/* Custom Font */
+
 @font-face {
     font-family: 'norse';
     src: url("../fonts/norse-bold-webfont.woff2") format('woff2'),
@@ -36,7 +36,6 @@ p, h1, h2, h3, h4, h5, h6 {
     font-style: normal;
 }
 
-/* Variables for common values */
 :root {
     --primary-color: rgb(39, 155, 200);
     --primary-color-hover: rgb(59, 175, 220);
@@ -48,7 +47,7 @@ p, h1, h2, h3, h4, h5, h6 {
     --border-radius: 5px;
 }
 
-/* Container */
+
 .container {
     display: flex;
     min-height: 100svh;
@@ -99,7 +98,7 @@ p, h1, h2, h3, h4, h5, h6 {
     color: white;
 }
 
-/* Main Content */
+
 .main {
     display: flex;
     flex-direction: column;
@@ -119,7 +118,7 @@ p, h1, h2, h3, h4, h5, h6 {
     padding-bottom: 30px;
 }
 
-/* Sign-up Section */
+
 .signup-section {
     background: white;
     box-shadow: 5px 2px 5px 5px rgba(0, 0, 0, 0.1);
@@ -147,7 +146,7 @@ p, h1, h2, h3, h4, h5, h6 {
     display: block;
 }
 
-/* Input Styles */
+
 .signup-form input {
     border-radius: var(--border-radius);
     border: 1px solid #E5E7EB;
@@ -177,7 +176,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 
 
-/* Submit Button */
+
 .signup-form-submit button {
     padding: 8px 42px;
     cursor: pointer;
@@ -193,7 +192,7 @@ p, h1, h2, h3, h4, h5, h6 {
     background: var(--primary-color-hover);
 }
 
-/* Account Active */
+
 .account-active {
     font-weight: 500;
     padding-top: 30px;
@@ -204,7 +203,7 @@ p, h1, h2, h3, h4, h5, h6 {
     font-weight: var(--font-weight-bold);
 }
 
-/* Footer Section */
+
 .footer-section {
     padding: 30px 0 30px 30px;
 }
